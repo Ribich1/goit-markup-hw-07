@@ -445,13 +445,14 @@ nav .current {
   margin-left: 40px;
 }
 .nav-cont {
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: baseline;
 }
 .wrap-logo {
-  display: flex;
-  align-items: baseline;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
 }
 .wrap-logo:first-child {
   /* margin-left: 156px; */
