@@ -290,6 +290,12 @@ line-height: 24px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+@media screen and (min-width: 768px) {
+  .nav-item {
+    width: auto;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .item {
     font-weight: 400;
@@ -407,7 +413,8 @@ nav .current {
 }
 .logo {
   display: block;
-  margin-bottom: 16px;
+
+  /* margin-bottom: 16px; */
 
   /* IRIS */
 
@@ -439,45 +446,89 @@ nav .current {
   /* display: flex;
   margin-left: 76px; */
 }
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
-    margin-left: 76px;
+    gap: 40px;
+    /* margin-left: 76px; */
   }
-} */
+  .nav-cont {
+    align-items: center;
+  }
+}
 /* .site-nav li {
   outline: 1px solid tomato;
 } */
-.site-nav .item:not(:last-child) {
+/* .site-nav .item:not(:last-child) {
   margin-right: 40px;
 }
 .auth-nav .item + .item {
   margin-left: 40px;
-}
+} */
 .auth-nav {
   display: none;
   /* display: flex; */
 }
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+  .nav-cont:last-child {
+    gap: 0;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
   .auth-nav {
     display: flex;
+    gap: 40px;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 28px;
   }
-} */
+  .auth-nav.item + .item {
+    margin-left: 40px;
+  }
+  .nav-cont {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap-logo {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .auth-nav.item + .item {
   margin-left: 40px;
 }
 .nav-cont {
   display: flex;
-  justify-content: iples space-between;
+  gap: 120px;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .wrap-logo {
   display: block;
-  padding-top: 24px;
+  gap: 120px;
+  align-items: center;
+  /* padding-top: 24px; */
   /* display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between; */
+}
+@media screen and (min-width: 768px) {
+  .wrap-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+  }
 }
 .wrap-logo:first-child {
   /* margin-left: 156px; */
@@ -778,8 +829,8 @@ img {
   }
   .customers {
     row-gap: 72px;
-    column-gap: 24px;
     justify-content: center;
+    column-gap: 24px;
   }
   .custom-link {
     width: 168px;
@@ -1027,7 +1078,8 @@ img {
   | Mobile-menu
   |============================
 */
-.menu-toggle {
+.menu-toggle,
+.menu-close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1043,9 +1095,24 @@ img {
   outline: none;
   cursor: pointer;
 }
+.menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu:nth-child(3) {
+  margin-top: auto;
+}
 
 @media (min-width: 481px) {
   .menu-toggle {
+    display: none;
+  }
+  .menu-container {
     display: none;
   }
 }
@@ -1060,10 +1127,13 @@ img {
   top: 0;
   left: 0;
   z-index: 999;
-  width: 100%;
-  height: 100%;
-  padding: 32px;
-  background-color: #3f51b5;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 35px 40px 40px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
   transition: transform 250ms ease-in-out;
 
   transform: translateX(100%);
@@ -1089,6 +1159,35 @@ img {
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #fff;
   text-decoration: none;
+  font-family: "Roboto";
+  font-style: 400;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  color: var(--accent-txt-cl);
+}
+
+.mobile-menu .contacts {
+  color: var(--main-txt-cl);
+}
+.mobile-menu .phone {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.socials {
+  gap: 56px;
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--pressed-bg-cl);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: background-color;
+}
+.mobile-menu .link:hover,
+.mobile-menu .link:focus {
+  color: var(--pressed-txt-cl);
 }
