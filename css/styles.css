@@ -79,9 +79,11 @@ body {
 
 .hero {
   max-width: 1440px;
-  height: 600px;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  height: 432px;
+
+  padding-top: 112px;
+  padding-bottom: 112px;
+
   background-color: var(--hero-bg-cl);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -91,6 +93,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 436px;
+    padding-top: 112px;
+    padding-bottom: 108px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    height: 600px;
+  }
 }
 .container {
   /* 320px<=phone screen<=infinity */
@@ -243,19 +260,41 @@ h6 {
 }
 /* h1 */
 .main-title {
-  width: 494px;
-  height: 120px;
+  width: 320px;
+  height: 80px;
+  /* width: 496px;
+  height: 120px; */
 
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+  /* margin-bottom: 48px; */
   margin-left: auto;
   color: var(--hero-txt-cl);
-  font-size: 56px;
-  line-height: 60px;
-  letter-spacing: 2%;
+  /* font-size: 56px; */
+  /* line-height: 1.07; */
+  letter-spacing: 0.02em;
   text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 }
+@media screen and (min-width: 768px) {
+  .main-title {
+    width: 496px;
+    height: 120px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-title {
+    margin-bottom: 48px;
+  }
+}
+
 /* h2 */
 .title {
   margin-top: 0;
