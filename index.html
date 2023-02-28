@@ -148,7 +148,7 @@
 
         </section>
         <!-- Our Team -->
-        <!-- <section class="section team">
+        <section class="section team">
             <div class="container">
                 <h2 class="title">Our Team</h2>
                 <ul class="list team-ul">
@@ -157,7 +157,7 @@
                         <div class="item">
                             <h3 class="title-item">Mark Guerrero</h3>
                             <p class="team-position">Product Designer</p>
-                            <ul class="socials list">
+                            <ul class="socials-team list">
                                 <li><a class="socials-link link" href="https://instagram.com" aria-label="Instagram"
                                         target="_blank" rel="noopener noreferrer">
                                         <svg class="socials-icon" width="16" height="16">
@@ -195,7 +195,7 @@
                         <div class="item">
                             <h3 class="title-item">Tom Ford</h3>
                             <p class="team-position">Frontend Developer</p>
-                            <ul class="socials list">
+                            <ul class="socials-team list">
                                 <li><a class="socials-link link" href="https://instagram.com" aria-label="Instagram"
                                         target="_blank" rel="noopener noreferrer">
                                         <svg class="socials-icon" width="16" height="16">
@@ -232,7 +232,7 @@
                         <div class="item">
                             <h3 class="title-item">Camila Garcia</h3>
                             <p class="team-position">Marketing</p>
-                            <ul class="socials list">
+                            <ul class="socials-team list">
                                 <li><a class="socials-link link" href="https://instagram.com" aria-label="Instagram"
                                         target="_blank" rel="noopener noreferrer">
                                         <svg class="socials-icon" width="16" height="16">
@@ -269,7 +269,7 @@
                         <div class="item">
                             <h3 class="title-item">Daniel Wilson</h3>
                             <p class="team-position">UI Designer</p>
-                            <ul class="socials list">
+                            <ul class="socials-team list">
                                 <li><a class="socials-link link" href="https://instagram.com" aria-label="Instagram"
                                         target="_blank" rel="noopener noreferrer">
                                         <svg class="socials-icon" width="16" height="16">
@@ -303,7 +303,7 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
 
         <!-- | customers -->
 
@@ -486,21 +486,26 @@
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
         <button class="menu-close-btn js-close-menu">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <svg class="modal-icon-menu" width="24" height="24">
+                <use href="./images/icons/icons.svg#close"></use>
+            </svg>
+
+            <!-- <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path fill-rule="evenodd"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                     clip-rule="evenodd"></path>
-            </svg>
+            </svg> -->
         </button>
 
         <ul class="mobile-menu">
-            <li><a class="link" href="index.html">Studio</a></li>
+            <li><a class="link" href=" index.html">Studio</a></li>
             <li><a class="link" href="portfolio.html">Portfolio</a></li>
             <li><a class="link" href>Contacts</a></li>
         </ul>
-        <ul class="mobile-menu menu-contacts">
-            <li class="link"><a class="link contacts" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-            <li class="link"><a class="link contacts phone" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <ul class="menu-contacts">
+            <li class="link"><a class="link phone" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+            <li class="link"><a class="link mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
         </ul>
         <ul class="socials list">
             <li><a class="socials-link link" href="https://instagram.com" aria-label="Instagram" target="_blank"
