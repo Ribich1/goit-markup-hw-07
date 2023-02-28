@@ -469,9 +469,6 @@ nav .current {
   display: block;
 
   /* margin-bottom: 16px; */
-
-  /* IRIS */
-
   color: var(--brand-txt-cl);
   font-weight: 800;
   font-style: normal;
@@ -482,6 +479,10 @@ nav .current {
   letter-spacing: 0.03em;
   text-decoration: none;
   text-transform: uppercase;
+}
+.logo-bottom {
+  margin-bottom: 16px;
+  text-align: center;
 }
 .span-light {
   color: var(--light-txt-cl);
@@ -740,10 +741,24 @@ img {
 */
 
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: var(--dark-bg-cl);
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-left: 108px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: auto;
+  }
+}
+
 .item-footer {
   width: 264px;
   margin: 0;
@@ -759,19 +774,22 @@ img {
   font-size: 16px;
   font-family: "Roboto";
   line-height: 1, 5;
-  /* identical to box height, or 150% */
-
   letter-spacing: 0.02em;
+  text-align: center;
 }
 .footer-socials {
   width: 208px;
 }
 .footer-wrap {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .footer-logo {
   display: block;
-  margin-right: 120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .socials-footer {
@@ -816,14 +834,19 @@ img {
 }
 .subscribe-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
   /* justify-content: center; */
   align-items: center;
-  width: 453px;
-  height: 80px;
+  width: 398px;
+  height: 136px;
+  /* width: 453px;
+  height: 80px; */
 }
 .subscribe-item {
   margin: 0;
+  text-align: center;
+  margin-bottom: 16px;
 }
 .subscribe-form-input {
   width: 264px;
